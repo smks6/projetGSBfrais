@@ -9,13 +9,13 @@
             <div class="form-group">
                 <label class="col-md-6">Identifiant :</label>
                 <div class="col-md-6">
-                    <input type="text" name="id" value="" class="form-control">
+                    <input type="text" name="login" value="" class="form-control">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-3">Mot de passe : </label>
                 <div class="col-md-6">
-                    <input type="password" name="mdp" value="" class="form-control">
+                    <input type="password" name="pwd" value="" class="form-control">
                 </div>
             </div>
             <div class="form-group">
@@ -30,5 +30,8 @@
                 </div>
             </div>
         </div>
+        @if(isset($erreur))
+            <div class="alert alert-danger" role="alert">{{$erreur}}</div>
+        @endif
     </form>
 @endsection
