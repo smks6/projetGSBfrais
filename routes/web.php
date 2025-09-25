@@ -2,7 +2,6 @@
 use App\Http\Controllers\VisiteurController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FraisController;
-
 Route::get('/', function () {return view('home');});
 Route::post('/authentifier', [VisiteurController::class, 'auth']);
 Route::get('/connecter', [VisiteurController::class, 'login']);
