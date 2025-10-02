@@ -23,7 +23,8 @@
                     <td>{{ $frais->nbjustificatifs }}</td>
                     <td>{{ $frais->montantvalide }}</td>
                     <td>{{ $frais->id_etat }}</td>
-                    <td><a href="modifier">Modifier</a> </td>
+                    <td><a href="{{ url('/editerFrais/' .$frais->id_frais) }}">Modifier</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

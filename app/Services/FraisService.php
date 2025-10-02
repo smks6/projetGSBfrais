@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Services;
+use App\Models\Etat;
 use App\Models\Frais;
 
 class FraisService
@@ -12,5 +13,14 @@ class FraisService
 
     public function saveFrais($frais){
         $frais->save();
+    }
+
+    public function getFrais($id){
+        $frais=Frais::query()->find($id);
+        return $frais;
+    }
+
+   public function getListEtats(){
+       return Etat::query()->get();
     }
 }
