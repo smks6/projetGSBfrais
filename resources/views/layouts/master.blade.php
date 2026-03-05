@@ -28,6 +28,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/ajouterFrais') }}">Ajouter</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/listerMedicaments')}}">Lister médicaments</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">

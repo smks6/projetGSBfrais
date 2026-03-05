@@ -8,6 +8,8 @@
             <thead class="thead-dark">
             <tr>
                 <th>Mois</th>
+                <th>Titre</th>
+                <th>Modification</th>
                 <th>Montant saisi</th>
                 <th>Nb justificatifs</th>
                 <th>Montant validé</th>
@@ -18,12 +20,14 @@
             <tbody>
             @foreach($fiches as $frais)
                 <tr>
-                    <td>{{ $frais->anneemois }}</td>
+                    <td>{{$frais->anneemois}}</td>
+                    <td>{{$frais->titre}}</td>
+                    <td>{{$frais->datemodification}}</td>
                     <td></td>
-                    <td>{{ $frais->nbjustificatifs }}</td>
-                    <td>{{ $frais->montantvalide }}</td>
-                    <td>{{ $frais->id_etat }}</td>
-                    <td><a href="{{ url('/editerFrais/' .$frais->id_frais) }}">Modifier</a>
+                    <td>{{$frais->nbjustificatifs}}</td>
+                    <td>{{$frais->montantvalide}}</td>
+                    <td>{{$frais->id_etat}}</td>
+                    <td><a href="{{ url('/editerFrais/'.$frais->id_frais) }}">Modifier</a>
                     </td>
                 </tr>
             @endforeach

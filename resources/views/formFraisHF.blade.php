@@ -1,24 +1,24 @@
 @extends('layouts.master')
 
 @section('content')
-    <form method="POST" action="{{ url('/validerFrais') }}">
+    <form method="POST" action="{{ url('/validerFraisHF') }}">
         {{csrf_field() }}
-        <h1>@if($frais->id_frais) Modification @else Ajout @endif Fiche de frais</h1>
+        <h1>Ajouter Frais Hors Forfait</h1>
         <div class="col-md-12 card card-body bg-light">
             <div class="form-group">
-                <label class="col-md-3">Mois</label>
+                <label class="col-md-3">Date</label>
                 <div class="col-md-6">
-                    <input type="text" name="mois" class="form-control" maxlength="7" value="{{$frais->annemois}}" placeholder="MM-AAAA" required>
+                    <input type="text" name="mois" class="form-control" maxlength="7" value="{{$ficheHF->date_fraishorsforfait}}" placeholder="MM-AAAA" required>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3">Titre</label>
+                <label class="col-md-3">Libellé</label>
                 <div class="col-md-6">
-                    <input type="text" name="titre" class="form-control" maxlength="" value="{{$frais->titre}}" required>
+                    <input type="text" name="lib_horsforfait" class="form-control" maxlength="" value="{{$ficheHF->lib_horsforfait}}" required>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-3">Montant saisi</label>
+                <label class="col-md-3">Montant Hors Forfait</label>
                 <div class="col-md-6">
                     <input type="number" name="total" class="form-control " min="0" step="0.01" value="" disabled>
                 </div>

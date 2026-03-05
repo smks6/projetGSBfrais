@@ -31,4 +31,15 @@ class VisiteurController extends Controller
         $visiteur->signOut();
         return view('home');
     }
+
+    public function initpwd(Request $request)
+    {
+        $login=$request->input('login');
+        $pwd=$request->input('pwd');
+        $service=new VisiteurService();
+
+        if ($service->signIn($login,$pwd)) {
+
+        }
+    }
 }
